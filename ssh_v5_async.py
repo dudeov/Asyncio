@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import getpass
 from cfw import dict_cfw
@@ -77,11 +77,8 @@ def read_args():
         f_open_flag = 'w'
 
 
-    try:
-        UN = raw_input("Username: ")
-    except:
-        UN = input("Username: ")
 
+    UN = input("Username: ")
     PW = getpass.getpass("Password for %s: " % UN)
 
     init_data = {'username': UN, 'password': PW, 'fname': args.fn, 'command_list': args.my_Command_list.split(',')}
